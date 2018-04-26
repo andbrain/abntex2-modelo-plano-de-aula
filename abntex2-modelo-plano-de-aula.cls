@@ -11,13 +11,13 @@
 %%
 %% This work has the LPPL maintenance status `maintained'.
 %% 
-%% The Current Maintainer of this work is Adriano Ruseler, ruseler@inep.ufsc.br
+%% The Current Maintainer of this work is Anderson Pimentel, apds.anderson@icomp.ufam.edu.br
 %%
 %% Further information about abnTeX2 are available on http://abntex2.googlecode.com/
 %%
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{abntex2-modelo-plano-de-aula}[2015/08/05 v1.0 Modelo para plano de aula baseado em abnTeX2]
+\ProvidesClass{abntex2-modelo-plano-de-aula}[2018/04/25 v1.0 Modelo para plano de aula baseado em abnTeX2]
 
 %
 % Repassa todos os parametros a classe abntex2, 
@@ -107,6 +107,10 @@
 \providecommand{\imprimirdepartamento}{}
 \newcommand{\departamento}[1]{\renewcommand{\imprimirdepartamento}{#1}}
 
+% Comandos de dados - area
+\providecommand{\imprimirarea}{}
+\newcommand{\area}[1]{\renewcommand{\imprimirarea}{#1}}
+
 
 
 % Comandos de dados - Programa
@@ -177,13 +181,16 @@
 
 %%cabeçalhos
 \makeevenhead{notasUFSC}
-{\imprimircodigo\hskip.1cm--\hskip.1cm\imprimirdisciplina\hskip.1cm--\hskip.1cm\imprimiraula} %%pagina par
+%{\imprimircodigo\hskip.1cm--\hskip.1cm\imprimirdisciplina\hskip.1cm--\hskip.1cm\imprimiraula} %%pagina par
+{\imprimirtitulo} %%pagina par
 {}
-{EEL/CTC/UFSC}
+%{EEL/CTC/UFSC}
+{}
 \makeoddhead{notasUFSC} %%pagina ímpar ou com oneside
-{\imprimircodigo\hskip.1cm--\hskip.1cm\imprimirdisciplina\hskip.1cm--\hskip.1cm\imprimiraula}
+{\imprimirtitulo}
 {}
-{EEL/CTC/UFSC}
+%{EEL/CTC/UFSC}
+{}
 \makeheadrule{notasUFSC}{\textwidth}{\normalrulethickness} %linha
 %\makefootrule{notasUFSC}{\textwidth}{\normalrulethickness}{1pt}
 
@@ -220,13 +227,13 @@
 
 %% rodapé
 \makeevenfoot{letterUFSC} %%pagina par
-{{\small \imprimirautor \\ \imprimirlaboratorio \\ \imprimirwebsite}}
+{{\small \imprimirautor}}
 {}
-{\small  \imprimiremail \\ \imprimirtelefone \\ \imprimircelular}
+{\small  \imprimiremail}
 \makeoddfoot{letterUFSC} %%pagina ímpar ou com oneside
-{\small \imprimirautor \\ \imprimirlaboratorio \\ \imprimirwebsite}
+{\small \imprimirautor}
 {}
-{\small  \imprimiremail \\ \imprimirtelefone \\ \imprimircelular}
+{\small  \imprimiremail}
 
 % ------------------------------------------------------------------------
 % ------------------------------------------------------------------------
@@ -252,7 +259,7 @@
 
 % Upper part of the page. The '~' is needed because \\
 % only works if a paragraph has started.
-\includegraphics[width=0.25\textwidth]{logo-ufsc.pdf}~\\[1cm]
+\includegraphics[width=0.25\textwidth]{brasao.jpg}~\\[1cm]
 
 %----------------------------------------------------------------------------------------
 %	HEADING SECTIONS
@@ -332,19 +339,23 @@
 %	TABLE SECTION
 %----------------------------------------------------------------------------------------
 
-\centerline{\huge \textbf{Plano de aula -- \imprimiraula}}
+\centerline{\huge \textbf{Prova de Desempenho Didático}}
+%\centerline{\huge \textbf{Plano de aula -- \imprimiraula}}
 
 \begin{table}[!h]
 	\centering
 	\begin{tabular}{l|l}	\toprule
 		\multicolumn{2}{l}{\textbf{Dados de Identificação}} \\	\hline
 		Professor:         &    \imprimirautor           \\	\hline
-		Disciplina:        &   \imprimircodigo {} --  \imprimirdisciplina          \\	\hline
+		%%Disciplina:        &   \imprimircodigo {} --  \imprimirdisciplina          \\	\hline
+		Área:			   & \imprimirarea \\ \hline 
 		Tema:              &    \imprimirtitulo                \\	\hline
-		Semestre:          &    \imprimirsemestre          \\	\hline
-		Turma:          &    \imprimirturma          \\	\hline
-		Sala:              &    \imprimirsala             \\	\hline
-		Horário:   &    \imprimirhorario         \\ \hline	\bottomrule
+		Data:				&	27/04/2018 \\ \hline
+		Duração:			&	50 min.	\\ \hline
+		%Semestre:          &    \imprimirsemestre          \\	\hline
+		%Turma:          &    \imprimirturma          \\	\hline
+		%Sala:              &    \imprimirsala             \\	\hline
+		%Horário:   &    \imprimirhorario         \\ \hline	\bottomrule
 	\end{tabular}
 \end{table}
 
