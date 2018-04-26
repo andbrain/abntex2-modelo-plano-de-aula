@@ -208,13 +208,13 @@
 
 %%cabeçalhos
 \makeevenhead{letterUFSC}
-{\includegraphics[width=60pt]{logo-ufsc.pdf}} %%pagina par
+{\includegraphics[width=60pt]{brasao.jpg}} %%pagina par
 {\textsc{\imprimiruniversidade} \\ \textsc{\imprimircentro} \\ \textsc{\imprimirdepartamento} }
-{\includegraphics[width=60pt]{logo-ctc.pdf}}
+{\includegraphics[width=60pt]{logo-ufam.png}}
 \makeoddhead{letterUFSC} %%pagina ímpar ou com oneside
-{\includegraphics[width=60pt]{logo-ufsc.pdf}}
+{\includegraphics[width=60pt]{brasao.jpg}}
 {\textsc{\imprimiruniversidade} \\ \textsc{\imprimircentro} \\ \textsc{\imprimirdepartamento} }
-{\includegraphics[width=60pt]{logo-ctc.pdf}}
+{\includegraphics[width=60pt]{logo-ufam.png}}
 \makeheadrule{letterUFSC}{1.1\textwidth}{\normalrulethickness} %linha
 \makefootrule{letterUFSC}{1.1\textwidth}{\normalrulethickness}{1pt}
 
